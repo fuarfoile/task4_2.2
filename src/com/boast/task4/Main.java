@@ -40,17 +40,18 @@ class SomeClass {
     private int privateValue;
 
     public SomeClass(){
-
+        this(0, 0, 0);
     }
     public SomeClass(int publicValue){
-        this.publicValue = publicValue;
+        this(publicValue, 0, 0);
     }
     public SomeClass(int publicValue, int protectedValue){
-        this(publicValue);
-        this.protectedValue = protectedValue;
+        this(publicValue, protectedValue, 0);
+
     }
     public SomeClass(int publicValue, int protectedValue, int privateValue){
-        this(publicValue, protectedValue);
+        this.publicValue = publicValue;
+        this.protectedValue = protectedValue;
         this.privateValue = privateValue;
     }
 
